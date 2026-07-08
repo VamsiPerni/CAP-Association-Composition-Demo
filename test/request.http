@@ -1,0 +1,7 @@
+
+###
+GET http://localhost:4004/browse/$metadata/CustomerEntity
+
+###
+GET http://localhost:4004/browse/CustomerEntity
+
