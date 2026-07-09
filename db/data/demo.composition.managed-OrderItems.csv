@@ -1,0 +1,5 @@
+itemID,productName,quantity,parent_orderID
+1,Laptop,1,1001
+2,Mouse,2,1001
+3,Keyboard,1,1002
+4,Monitor,1,1002

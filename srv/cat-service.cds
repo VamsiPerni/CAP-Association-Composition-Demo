@@ -13,3 +13,8 @@ service ManagedAssociationService @(path: '/browse/managed-assoc-report') {
     entity ContactEntity as SELECT from managed.ContactEntity{*};
 }
 
+using {demo.composition.managed as compo} from '../db/managed-compo-schema';
+service ManagedCompositionService @(path: '/browse/managed-compo-report') {
+    entity Orders as SELECT from compo.Orders {*};
+    entity OrderItems as SELECT from compo.OrderItems {*};
+}

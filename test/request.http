@@ -5,3 +5,32 @@ GET http://localhost:4004/browse/$metadata/CustomerEntity
 ###
 GET http://localhost:4004/browse/CustomerEntity
 
+# Deep Insert Example - POST , where it will Create Order and OrderItems in a single request
+###
+POST http://localhost:4004/browse/managed-compo-report/Orders
+Content-Type: application/json
+
+{
+    "orderID":1003,
+    "customerName":"Mohana",
+    "items":[
+        {
+            "itemID":5,
+            "productName":"Headphones",
+            "quantity":1
+        },
+        {
+            "itemID":6,
+            "productName":"Keyboard",
+            "quantity":2
+        }
+    ]
+}
+
+# Cascade Delete Example - DELETE , where it will delete Order and OrderItems in a single request
+###
+DELETE http://localhost:4004/browse/managed-compo-report/Orders(1003)
+
+
+
+
